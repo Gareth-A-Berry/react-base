@@ -1,0 +1,27 @@
+@import "../../../sass/colors";
+@import "../../../sass/fonts";
+
+.typography {
+  color: $font-color;
+  text-decoration: none;
+
+  &--error {
+    color: $red;
+  }
+
+  &--caps {
+    text-transform: uppercase;
+  }
+
+  @each $key, $size in $font-sizes {
+    &--#{$key} {
+      font-size: $size;
+    }
+  }
+
+  @each $key, $weight in $weights {
+    &--#{$key} {
+      font-weight: $weight;
+    }
+  }
+}

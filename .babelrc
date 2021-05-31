@@ -1,0 +1,32 @@
+{
+  "presets": ["@babel/env", "@babel/react"],
+  "plugins": [
+    "syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-syntax-class-properties",
+    "@babel/plugin-proposal-private-methods",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@root": "./",
+          "@src": "./src",
+          "@assets": "./public/assets",
+          "@shared": "./src/shared",
+          "@routes": "./src/shared/routes",
+          "@store": "./src/shared/store",
+          "@factories": "./src/shared/factories",
+          "@setup": "./src/setup",
+          "@components": "./src/shared/components",
+          "@constants": "./src/shared/constants",
+          "@redux": "./src/shared/redux",
+          "@utils": "./src/shared/utils",
+          "@config": "./src/shared/config",
+          "@validation": "./src/shared/utils/validation",
+          "@sass": "./src/sass",
+          "@hocs": "./src/shared/higher-order-components"
+        }
+      }
+    ]
+  ]
+}

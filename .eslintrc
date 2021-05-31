@@ -1,0 +1,33 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "extends": ["essentials", "react"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "jsx-quotes": 0,
+    "quotes": ["error", "single"],
+    "no-console": 1,
+    "semi": "off",
+    "indent": ["error", 2, {
+      "ignoredNodes": ["TemplateLiteral"]
+    }],
+    "comma-dangle": 0,
+    "space-before-function-paren": 0,
+    "jsx-curly-spacing": 0,
+    "no-magic-numbers": "off",
+    "curly": "off",
+    "generator-star-spacing": "off",
+    "operator-linebreak": "off",
+    "react/prop-types": "error",
+    "template-curly-spacing" : "off"
+  },
+  "settings": {
+    "react": {
+      "version": "16.13.1"
+    }
+  }
+}

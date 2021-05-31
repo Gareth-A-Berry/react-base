@@ -1,0 +1,22 @@
+{
+  "setupFiles": ["jest-canvas-mock", "<rootDir>/src/tests/setupTests.js"],
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "testMatch": ["**/src/**/*.test.{js,jsx}"],
+  "testPathIgnorePatterns": ["node_modules", "cypress", "coverage", "src/app"],
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/tests/__mocks__/fileMock.js",
+      "\\.(s?css|less)$": "<rootDir>/src/tests/__mocks__/styleMock.js",
+    "axios": "<rootDir>/src/tests/__mocks__/axios.js"
+  },
+  "verbose": true,
+  "collectCoverageFrom": ["<rootDir>/src/**/*.{js,jsx}"],
+  "transform": {
+    "^.+\\.(js|jsx)$": "babel-jest",
+    "\\.svg$": "<rootDir>/src/tests/svgMocker.js"
+  },
+  "coverageReporters": [
+    "text",
+    "cobertura",
+    "html"
+  ]
+}
